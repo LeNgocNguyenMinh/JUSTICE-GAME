@@ -173,7 +173,8 @@ public class PlayerController : MonoBehaviour
         SoundControl.Instance.PlayerDeflectTingSoundPlay();
         parrySpriteRenderer.sprite = teleParrySprite;
         Vector3 localScale = parryTransform.localScale;
-        localScale.x = 2f;
+        localScale.x *= 2f;
+        localScale.y *= 2f;
         parryTransform.localScale = localScale;
         //using DG, make it scale back to original in parryWindow time
         parryTransform.DOScale(1f, parryWindow).OnComplete(()=>

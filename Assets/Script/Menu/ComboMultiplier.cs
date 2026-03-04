@@ -38,13 +38,13 @@ public class ComboMultiplier : MonoBehaviour
     private void UpdateComboDisplay()
     {
         int index = Random.Range(0, deflectSuccessSprite.Length);
-        PopUpSprite(deflectSuccessSprite[index], .5f, .5f, 4f);
+        PopUpSprite(deflectSuccessSprite[index]);
     }
     public void ComboReset()
     {
         comboCount = 0;
         int index = Random.Range(0, deflectFailSprite.Length);
-        PopUpSprite(deflectFailSprite[index], .5f, .5f, 4f);
+        PopUpSprite(deflectFailSprite[index]);
     }
     public void PopUpText(string text, float showDuration, float hideDuration, float heightFloat)
     {
@@ -67,7 +67,7 @@ public class ComboMultiplier : MonoBehaviour
             });
         });
     }
-    public void PopUpSprite(Sprite sprite, float showDuration, float hideDuration, float heightFloat)
+    public void PopUpSprite(Sprite sprite)
     {
         GameObject tmpObj = Instantiate(popUpObject.gameObject, rectTransform);
         Image tmpImage = tmpObj.GetComponent<Image>();
@@ -76,12 +76,12 @@ public class ComboMultiplier : MonoBehaviour
         tmpRect.rotation = Quaternion.Euler(0, 0, Random.Range(-15f, 15f)); */
         tmpRect.localScale = Vector3.zero;
         Sequence seq = DOTween.Sequence();
-        seq.Append(tmpRect.DOAnchorPosY(tmpRect.anchoredPosition.y + heightFloat, showDuration)
+        seq.Append(tmpRect.DOAnchorPosY(tmpRect.anchoredPosition.y + 2f, .1f)
             .SetEase(Ease.OutQuad));
-        seq.Append(tmpRect.DOScale(2f, showDuration).SetEase(Ease.OutBack));
+        seq.Join(tmpRect.DOScale(2f, .5f).SetEase(Ease.OutBack));
         seq.OnComplete(()=>
         {
-            tmpRect.DOScale(0f, hideDuration).SetEase(Ease.OutBack).OnComplete(()=>
+            tmpRect.DOScale(0f, .1f).SetEase(Ease.OutBack).OnComplete(()=>
             {
                 Destroy(tmpObj);
             });

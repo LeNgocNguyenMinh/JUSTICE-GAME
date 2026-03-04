@@ -3,7 +3,6 @@ using DG.Tweening;
 
 public class FirstTypeEnemy : Enemy
 {
-    [SerializeField]private float throwDelay;
     [SerializeField]private Transform throwPoint;
     [SerializeField]private GameObject projectilePrefab;
     [SerializeField]private float normalBulletSpeed;

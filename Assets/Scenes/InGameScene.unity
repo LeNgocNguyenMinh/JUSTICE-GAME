@@ -4174,53 +4174,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2217157925342291436, guid: 678f74b2413cdbe4c96d8d97ceee726f, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2217157925342291436, guid: 678f74b2413cdbe4c96d8d97ceee726f, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2217157925342291436, guid: 678f74b2413cdbe4c96d8d97ceee726f, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2217157925342291436, guid: 678f74b2413cdbe4c96d8d97ceee726f, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2217157925342291436, guid: 678f74b2413cdbe4c96d8d97ceee726f, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 118169699
-      objectReference: {fileID: 0}
-    - target: {fileID: 2217157925342291436, guid: 678f74b2413cdbe4c96d8d97ceee726f, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 3122869420252957597, guid: 678f74b2413cdbe4c96d8d97ceee726f, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3774738237920902471, guid: 678f74b2413cdbe4c96d8d97ceee726f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.86
-      objectReference: {fileID: 0}
     - target: {fileID: 8452400099777082048, guid: 678f74b2413cdbe4c96d8d97ceee726f, type: 3}
-      propertyPath: missPunishTime
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8452400099777082048, guid: 678f74b2413cdbe4c96d8d97ceee726f, type: 3}
-      propertyPath: maxHitEarnHeart
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8591231688147539524, guid: 678f74b2413cdbe4c96d8d97ceee726f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8591231688147539524, guid: 678f74b2413cdbe4c96d8d97ceee726f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
+      propertyPath: parryWindow
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8591231688147539524, guid: 678f74b2413cdbe4c96d8d97ceee726f, type: 3}
       propertyPath: m_LocalPosition.x

@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class EnemyAttackState : EnemyState
 {
-    private int attackCount;
     public EnemyAttackState(Enemy enemy, EnemyStateMachine stateMachine) : base(enemy, stateMachine)
     {
     }
     public override void EnterState()
     {
         base.EnterState();
-        attackCount = enemy.AttackNum;
         enemy.Animator.SetTrigger("Attack");
     }
     public override void ExitState()
@@ -36,15 +34,7 @@ public class EnemyAttackState : EnemyState
             }
             if(triggerType == Enemy.AnimationTriggerType.AttackAnimFinish)
             {
-                if(attackCount <= 0)
-                {
-                    stateMachine.ChangeState(enemy.IdleState);
-                }
-                else
-                {
-                    enemy.Animator.SetTrigger("Attack");
-                    attackCount--;
-                }
+                stateMachine.ChangeState(enemy.IdleState);
             }
         }
     }

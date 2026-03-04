@@ -76,10 +76,9 @@ MonoBehaviour:
   <RB>k__BackingField: {fileID: 8159057577425908562}
   <HealthController>k__BackingField: {fileID: 3860036618569364423}
   <IdleTime>k__BackingField: 2
-  <AttackNum>k__BackingField: 2
+  <AttackNum>k__BackingField: 1
   <Animator>k__BackingField: {fileID: 3168428956630683937}
   EnemyInPlayerDeadState: 0
-  throwDelay: 0.5
   throwPoint: {fileID: 1906958941089605594}
   projectilePrefab: {fileID: 4626510775894992466, guid: 8356f7f7b347565498bc0581aead4827, type: 3}
   normalBulletSpeed: 5
@@ -100,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4895a24556312449a77b8a6d8a3d7a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FTEnemyHealthController
-  <MaxHit>k__BackingField: 3
+  <MaxHit>k__BackingField: 1
   <DeadPart>k__BackingField: {fileID: 9202257386762179270, guid: 41faecbcbf5769445a6914fae4d401e2, type: 3}
   <MainBody>k__BackingField: {fileID: 2399933465141389829}
 --- !u!61 &5726945405910527996
