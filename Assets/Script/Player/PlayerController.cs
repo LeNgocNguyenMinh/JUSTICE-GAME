@@ -243,7 +243,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            playerAnimator.SetTrigger("BothSideIdle");
+            playerAnimator.SetTrigger("BothSideMiss");
         }
         yield return new WaitForSeconds(missPunishTime);
         if(side == "Left")

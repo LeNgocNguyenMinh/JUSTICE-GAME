@@ -22,9 +22,9 @@ public class DeadEffect : MonoBehaviour
     public void Throw(float angleDeg, Rigidbody2D rb)
     {
         float rad = angleDeg * Mathf.Deg2Rad;
-
+        float directionMul = transform.localScale.x > 0 ? 1 : -1;
         Vector2 dir = new Vector2(
-            Mathf.Cos(rad),
+            Mathf.Cos(rad)*directionMul,
             Mathf.Sin(rad)
         );
 

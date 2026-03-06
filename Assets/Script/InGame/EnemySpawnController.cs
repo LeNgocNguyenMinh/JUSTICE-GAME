@@ -23,7 +23,7 @@ public class EnemySpawnController : MonoBehaviour
         RLow,
         LHigh,
         LLow,
-        HightBoth,
+        HighBoth,
         LowBoth
     }
     public SpawnPos[] spawnFlow;
@@ -81,7 +81,7 @@ public class EnemySpawnController : MonoBehaviour
         switch(spawnPos)
         {
             case SpawnPos.RHigh:
-                enemy = Instantiate(onAirEnemyPrefabs, EnemySpawnPoints.Instance.rHightStartPoint.position, Quaternion.identity);
+                enemy = Instantiate(onAirEnemyPrefabs, EnemySpawnPoints.Instance.rHighStartPoint.position, Quaternion.identity);
                 scale = enemy.transform.localScale;
                 scale.x *= -1;
                 enemy.transform.localScale = scale;
@@ -97,7 +97,7 @@ public class EnemySpawnController : MonoBehaviour
                 enemyOnField.Add(enemy);
                 break;
             case SpawnPos.LHigh:
-                enemy = Instantiate(onAirEnemyPrefabs, EnemySpawnPoints.Instance.lHightStartPoint.position, Quaternion.identity);
+                enemy = Instantiate(onAirEnemyPrefabs, EnemySpawnPoints.Instance.lHighStartPoint.position, Quaternion.identity);
                 enemy.GetComponent<Enemy>().SetStartValue();
                 enemyOnField.Add(enemy);
                 break;
@@ -106,12 +106,12 @@ public class EnemySpawnController : MonoBehaviour
                 enemy.GetComponent<Enemy>().SetStartValue();
                 enemyOnField.Add(enemy);
                 break;
-            case SpawnPos.HightBoth:
-                enemy1 = Instantiate(onAirEnemyPrefabs, EnemySpawnPoints.Instance.rHightStartPoint.position, Quaternion.identity);
+            case SpawnPos.HighBoth:
+                enemy1 = Instantiate(onAirEnemyPrefabs, EnemySpawnPoints.Instance.rHighStartPoint.position, Quaternion.identity);
                 scale = enemy1.transform.localScale;
                 scale.x *= -1;
                 enemy1.transform.localScale = scale;
-                enemy2 = Instantiate(onAirEnemyPrefabs, EnemySpawnPoints.Instance.lHightStartPoint.position, Quaternion.identity);
+                enemy2 = Instantiate(onAirEnemyPrefabs, EnemySpawnPoints.Instance.lHighStartPoint.position, Quaternion.identity);
                 enemy1.GetComponent<Enemy>().SetStartValue();
                 enemy2.GetComponent<Enemy>().SetStartValue();
                 enemyOnField.Add(enemy1);

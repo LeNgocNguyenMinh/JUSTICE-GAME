@@ -51,21 +51,22 @@
     <Compile Include="Assets\Script\Player\PlayerEffect.cs" />
     <Compile Include="Assets\Script\Enemy\Base\Enemy.cs" />
     <Compile Include="Assets\Script\Enemy\StateMachine\EnemyStateMachine.cs" />
-    <Compile Include="Assets\Script\Enemy\EnemyType\FirstType\FirstTypeEnemy.cs" />
+    <Compile Include="Assets\Script\Enemy\EnemyType\2Swords\ThirdTypeEnemy.cs" />
     <Compile Include="Assets\Script\Player\PlayerController.cs" />
     <Compile Include="Assets\Script\Sound\SoundAndMusicSetting.cs" />
+    <Compile Include="Assets\Script\Enemy\EnemyType\FlyThrowEnemy\BulletCollider.cs" />
     <Compile Include="Assets\Script\Player\PlayerSword.cs" />
     <Compile Include="Assets\Script\Enemy\Base\EnemyParry.cs" />
     <Compile Include="Assets\Script\Enemy\StateMachine\ConcreteState\EnemyDieState.cs" />
     <Compile Include="Assets\Script\Enemy\StateMachine\EnemyState.cs" />
-    <Compile Include="Assets\Script\Enemy\EnemyType\SecondType\LongStickCollider.cs" />
     <Compile Include="Assets\Script\Menu\ComboMultiplier.cs" />
-    <Compile Include="Assets\Script\Enemy\EnemyType\FirstType\BulletCollider.cs" />
     <Compile Include="Assets\Script\InGame\EnemySpawnController.cs" />
+    <Compile Include="Assets\Script\Enemy\EnemyType\FlyThrowEnemy\FirstTypeEnemy.cs" />
     <Compile Include="Assets\Script\Enemy\StateMachine\ConcreteState\EnemyAfterPlayerDeadState.cs" />
     <Compile Include="Assets\Script\Sound\SoundControl.cs" />
     <Compile Include="Assets\Script\ParalloxEffect.cs" />
     <Compile Include="Assets\Script\Enemy\StateMachine\ConcreteState\EnemyIdleState.cs" />
+    <Compile Include="Assets\Script\Enemy\EnemyType\LongStickEnemy\SecondTypeEnemy.cs" />
     <Compile Include="Assets\Script\FloatEffect.cs" />
     <Compile Include="Assets\Script\Player\Health\PlayerHealthController.cs" />
     <Compile Include="Assets\Script\Enemy\StateMachine\ConcreteState\EnemyWalkState.cs" />
@@ -74,12 +75,13 @@
     <Compile Include="Assets\Script\Enemy\Health\FTEnemyHealthController.cs" />
     <Compile Include="Assets\Script\CreateListOfPoint.cs" />
     <Compile Include="Assets\Script\Enemy\Effect\GameEffect.cs" />
-    <Compile Include="Assets\Script\Enemy\EnemyType\SecondType\SecondTypeEnemy.cs" />
     <Compile Include="Assets\Script\Enemy\Base\EnemyStatusController.cs" />
     <Compile Include="Assets\Script\Enemy\Health\EnemyHealthController.cs" />
     <Compile Include="Assets\Script\Enemy\Health\STEnemyHealthController.cs" />
     <Compile Include="Assets\Script\InGame\EnemySpawnPoints.cs" />
+    <Compile Include="Assets\Script\Enemy\EnemyType\LongStickEnemy\LongStickCollider.cs" />
     <Compile Include="Assets\Script\Enemy\StateMachine\ConcreteState\EnemyAttackState.cs" />
+    <Compile Include="Assets\Script\Enemy\EnemyType\2Swords\TwoSwordsCollider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
