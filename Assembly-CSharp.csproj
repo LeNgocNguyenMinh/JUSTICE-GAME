@@ -51,6 +51,7 @@
     <Compile Include="Assets\Script\Player\PlayerEffect.cs" />
     <Compile Include="Assets\Script\Enemy\Base\Enemy.cs" />
     <Compile Include="Assets\Script\Enemy\StateMachine\EnemyStateMachine.cs" />
+    <Compile Include="Assets\Script\Tutorial\Tutorial.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyType\2Swords\ThirdTypeEnemy.cs" />
     <Compile Include="Assets\Script\Player\PlayerController.cs" />
     <Compile Include="Assets\Script\Sound\SoundAndMusicSetting.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Assets\Script\Enemy\StateMachine\ConcreteState\EnemyDieState.cs" />
     <Compile Include="Assets\Script\Enemy\StateMachine\EnemyState.cs" />
     <Compile Include="Assets\Script\Menu\ComboMultiplier.cs" />
+    <Compile Include="Assets\Script\Enemy\Health\TTEnemyHealthController.cs" />
     <Compile Include="Assets\Script\InGame\EnemySpawnController.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyType\FlyThrowEnemy\FirstTypeEnemy.cs" />
     <Compile Include="Assets\Script\Enemy\StateMachine\ConcreteState\EnemyAfterPlayerDeadState.cs" />

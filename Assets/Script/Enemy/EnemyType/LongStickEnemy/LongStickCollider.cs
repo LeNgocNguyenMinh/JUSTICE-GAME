@@ -9,10 +9,6 @@ public class LongStickCollider : EnemyParry
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.CompareTag("Player"))
-        {
-            PlayerHealthController.Instance.PlayerHurt();
-        }
         if(collider.CompareTag("RightCollider") && secondTypeEnemy.transform.localScale.x > 0)
         {
             secondTypeEnemy.ReachDes();
@@ -26,5 +22,7 @@ public class LongStickCollider : EnemyParry
     {
         enemyHealthController.EnemyHurt();
     }  
-
+    public override void EnemyATKHitPlayer()
+    {
+    }
 }

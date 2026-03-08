@@ -12,4 +12,7 @@ public class EnemyParry : MonoBehaviour
     {
         return CanParry;
     }
+    public virtual void EnemyATKHitPlayer()
+    {
+    }
 }

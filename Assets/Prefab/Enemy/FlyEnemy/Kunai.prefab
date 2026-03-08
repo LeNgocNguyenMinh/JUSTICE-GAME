@@ -123,7 +123,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1289428872280411416}
-  - {fileID: 4801735851186073213}
+  - {fileID: 1684304876289460694}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2654636721772465729
@@ -168,7 +168,6 @@ MonoBehaviour:
   rb: {fileID: 2654636721772465729}
   bulletRotate: {fileID: 1289428872280411416}
   rotateSpeed: 1
-  parryColor: {r: 1, g: 0.945992, b: 0, a: 1}
   mainBulletObject: {fileID: 4626510775894992466}
 --- !u!58 &1486578307368550290
 CircleCollider2D:
@@ -206,7 +205,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!1 &5778088213510370125
+--- !u!1 &7379454657398094663
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,8 +213,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4801735851186073213}
-  - component: {fileID: 5516968414019900686}
+  - component: {fileID: 1684304876289460694}
+  - component: {fileID: 6503628833671644539}
   m_Layer: 0
   m_Name: Trail
   m_TagString: Untagged
@@ -223,13 +222,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4801735851186073213
+--- !u!4 &1684304876289460694
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5778088213510370125}
+  m_GameObject: {fileID: 7379454657398094663}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -238,18 +237,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3188534769663463132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!96 &5516968414019900686
+--- !u!96 &6503628833671644539
 TrailRenderer:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5778088213510370125}
+  m_GameObject: {fileID: 7379454657398094663}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 0
+  m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -286,11 +285,11 @@ TrailRenderer:
   m_SortingLayerID: 118169699
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Time: 0.2
+  m_Time: 0.1
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.5
+    widthMultiplier: 0.1
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -298,20 +297,11 @@ TrailRenderer:
         time: 0
         value: 1
         inSlope: 0
-        outSlope: -1
-        tangentMode: 65
+        outSlope: 0
+        tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: -1
-        outSlope: 0
-        tangentMode: 5
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -342,7 +332,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: 0
+      m_ColorSpace: -1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -352,7 +342,7 @@ TrailRenderer:
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0.5
+  m_MinVertexDistance: 0.1
   m_MaskInteraction: 0
   m_Autodestruct: 0
   m_Emitting: 1

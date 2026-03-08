@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5457333299266418231}
-  - component: {fileID: 5275622601608138513}
   - component: {fileID: 6145013004755769389}
+  - component: {fileID: 2429240288201609552}
   m_Layer: 0
   m_Name: ParryPoint
   m_TagString: EnemyATKCollider
@@ -27,26 +27,12 @@ Transform:
   m_GameObject: {fileID: 2571345557273725456}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: 0}
+  m_LocalPosition: {x: 1.459, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2280748166350418105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5275622601608138513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2571345557273725456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eee6ff66847dafe41a60e5df98035388, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LongStickParry
-  secondTypeEnemy: {fileID: 2631780842858916423}
-  enemyHealthController: {fileID: 4713959621502030229}
 --- !u!58 &6145013004755769389
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -83,6 +69,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.34
+--- !u!114 &2429240288201609552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2571345557273725456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0b92f8194bc7545a4a04ced32741d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LongStickCollider
+  secondTypeEnemy: {fileID: 6476665494953769139}
+  enemyHealthController: {fileID: 4713959621502030229}
 --- !u!1 &7204626775997082934
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,10 +93,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2280748166350418105}
   - component: {fileID: 2988251635553064003}
-  - component: {fileID: 2631780842858916423}
   - component: {fileID: 2835895967647906917}
   - component: {fileID: 5566549102062863293}
   - component: {fileID: 4713959621502030229}
+  - component: {fileID: 6476665494953769139}
   m_Layer: 0
   m_Name: LongStick
   m_TagString: SecondTypeEnemy
@@ -143,29 +143,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2631780842858916423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7204626775997082934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 573dc9f47af5b0545873117fcafee827, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SecondTypeEnemy
-  <RB>k__BackingField: {fileID: 2835895967647906917}
-  <HealthController>k__BackingField: {fileID: 0}
-  <IdleTime>k__BackingField: 2
-  <AttackNum>k__BackingField: 2
-  <Animator>k__BackingField: {fileID: 2988251635553064003}
-  EnemyInPlayerDeadState: 0
-  runSpeed: 5
-  deadPart: {fileID: 9202257386762179270, guid: 07444d4392ea8f34e93df103757cf8dd, type: 3}
-  slash: {fileID: 6556547856231430551, guid: 59a84fbe3e1800b419c440c6c2fbcfaa, type: 3}
-  slashPos: {fileID: 5457333299266418231}
-  longStickCollider: {fileID: 5275622601608138513}
 --- !u!50 &2835895967647906917
 Rigidbody2D:
   serializedVersion: 5
@@ -244,6 +221,27 @@ MonoBehaviour:
   <MaxHit>k__BackingField: 1
   <DeadPart>k__BackingField: {fileID: 9202257386762179270, guid: 07444d4392ea8f34e93df103757cf8dd, type: 3}
   <MainBody>k__BackingField: {fileID: 7204626775997082934}
+--- !u!114 &6476665494953769139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7204626775997082934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 210c2ff110fb6e8438b072e949b6a3e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SecondTypeEnemy
+  <RB>k__BackingField: {fileID: 2835895967647906917}
+  <HealthController>k__BackingField: {fileID: 4713959621502030229}
+  <IdleTime>k__BackingField: 2
+  <AttackNum>k__BackingField: 1
+  <Animator>k__BackingField: {fileID: 2988251635553064003}
+  EnemyInPlayerDeadState: 0
+  runSpeed: 5
+  deadPart: {fileID: 9202257386762179270, guid: 07444d4392ea8f34e93df103757cf8dd, type: 3}
+  longStickCollider: {fileID: 2429240288201609552}
 --- !u!1 &8602864122263243843
 GameObject:
   m_ObjectHideFlags: 0

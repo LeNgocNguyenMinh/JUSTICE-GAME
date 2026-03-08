@@ -293,4 +293,12 @@ public class PlayerController : MonoBehaviour
     {
         return maxHitEarnHeart;
     }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("EnemyATKCollider"))
+        {
+            PlayerHealthController.Instance.PlayerHurt();
+            collision.GetComponent<EnemyParry>().EnemyATKHitPlayer();;
+        }
+    }
 }

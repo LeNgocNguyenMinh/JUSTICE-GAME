@@ -42,6 +42,7 @@ public class MenuController : MonoBehaviour
     private void Start()
     {
         scoreText.gameObject.SetActive(false); 
+        Tutorial.Instance.SetStartValue();
     }
     private void OnEnable()
     {

@@ -9,8 +9,6 @@ public class SecondTypeEnemy : Enemy
 {
     [SerializeField]private float runSpeed;
     [SerializeField]private GameObject deadPart;
-    [SerializeField]private GameObject slash;
-    [SerializeField]private Transform slashPos;
     [SerializeField]private LongStickCollider longStickCollider;
     private Vector3 direct;
     public override void SetStartValue()

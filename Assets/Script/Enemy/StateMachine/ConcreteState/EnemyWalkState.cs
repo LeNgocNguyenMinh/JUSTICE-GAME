@@ -11,7 +11,6 @@ public class EnemyWalkState : EnemyState
     public override void EnterState()
     {
         base.EnterState();
-        enemy.Walk();
         enemy.Animator.SetTrigger("Walk");
     }
     public override void ExitState()

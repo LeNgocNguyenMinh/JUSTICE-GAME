@@ -6,7 +6,6 @@ public class BulletCollider : EnemyParry
     [SerializeField]private Rigidbody2D rb;
     [SerializeField]private Transform bulletRotate;
     [SerializeField]private float rotateSpeed;
-    [SerializeField]private Color parryColor;
     [SerializeField]private GameObject mainBulletObject;
     private float parryFlySpeed;
     private Vector3 parryDesPos;
@@ -25,11 +24,6 @@ public class BulletCollider : EnemyParry
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.CompareTag("Player"))
-        {
-            PlayerHealthController.Instance.PlayerHurt();
-            DestroyBullet();
-        }
         if(collider.CompareTag("LeftCollider") || collider.CompareTag("RightCollider") || collider.CompareTag("GroundCollider"))
         {
             DestroyBullet();
@@ -40,4 +34,8 @@ public class BulletCollider : EnemyParry
         direct = (parryDesPos - transform.position).normalized;
         rb.linearVelocity = direct * parryFlySpeed;
     }   
+    public override void EnemyATKHitPlayer()
+    {
+        DestroyBullet();
+    }
 }
