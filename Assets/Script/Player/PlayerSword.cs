@@ -7,15 +7,14 @@ public class PlayerSword : MonoBehaviour
     [SerializeField]private GameObject parryParticle;
     [SerializeField]private Transform parryParticlePos;
     private bool canParry = false;
-    private float currentparryTime = 0f;
     private EnemyParry currentEnemyParry;
     public void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.CompareTag("EnemyATKCollider"))
         {
+            Tutorial.Instance.PlayTutorial();
             canParry = true;
             playerController.TeleParryOn();
-            Debug.Log("Bullet hit sword");
             currentEnemyParry = collider.GetComponent<EnemyParry>();
             StartCoroutine(ParryWindowRun());
         }

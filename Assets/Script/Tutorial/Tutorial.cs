@@ -4,30 +4,113 @@ using UnityEngine.UI;
 public class Tutorial : MonoBehaviour
 {
     public static Tutorial Instance;
+    [SerializeField]private float tutorialTimeScale;
     public GameObject image;
-
+    private bool panelActive;
+    private int tutorialNum = -1;
+    private bool inTutorial;
+    public enum TouchType
+    {
+        TouchLeft,
+        TouchRight,
+        TouchBoth,
+        TouchNone
+    }
+    private TouchType touchType;
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     [SerializeField]private Animator animator;
     public void SetStartValue()
     {
+        animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        panelActive = false;
         image.SetActive(false);
+        tutorialNum = -1;
+        inTutorial = true;
+    }
+    public void PlayTutorial()
+    {
+        if(tutorialNum == 2)
+        {
+            inTutorial = false;
+            return;
+        }
+        tutorialNum ++;
+        switch(tutorialNum)
+        {
+            case 0:
+                TouchRight();
+                break;
+            case 1:
+                TouchLeft();
+                break;
+            case 2:
+                TouchBoth();
+                break;
+        }
+
     }
     public void TouchLeft()
-    {
-        image.SetActive(true);
-        animator.SetTrigger("TouchLeft");
+    { 
+        if(!panelActive)
+        {
+            panelActive = true;
+            image.SetActive(true);
+            Time.timeScale = tutorialTimeScale;
+            touchType = TouchType.TouchLeft;
+            //let animator not effect by timescale
+            animator.SetTrigger("TouchLeft");
+        }  
     }
     public void TouchRight()
     {
-        image.SetActive(true);
-        animator.SetTrigger("TouchRight");
+        if(!panelActive)
+        {
+            panelActive = true;
+            image.SetActive(true);
+            Time.timeScale = tutorialTimeScale;
+            touchType = TouchType.TouchRight;
+            //let animator not effect by timescale
+            animator.SetTrigger("TouchRight");
+        } 
     }
     public void TouchBoth()
     {
-        image.SetActive(true);
-        animator.SetTrigger("TouchBoth");
+        if(!panelActive)
+        {
+            panelActive = true;
+            image.SetActive(true);
+            Time.timeScale = tutorialTimeScale;
+            touchType = TouchType.TouchBoth;
+            //let animator not effect by timescale
+            animator.SetTrigger("TouchBoth");
+        } 
     }
-    public void CloseTutorial()
+    public bool GetInTutorial()
     {
+        return inTutorial;
+    }
+    public void CloseCurrentTutorial()
+    {
+        panelActive = false;
         image.SetActive(false);
+        Time.timeScale = 1f;
+    }
+    public bool CheckTutorialSide(TouchType side)
+    {
+        if(panelActive && side == touchType)
+        {
+            return true;
+        }
+        return false;
     }
 }

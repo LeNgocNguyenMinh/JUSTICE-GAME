@@ -25,10 +25,11 @@ public class PlayerController : MonoBehaviour
     private bool leftTouch;
     private bool rightTouch;
     private bool canParry = false;
+    private bool inTutorial;
     public enum AnimationTriggerType
     {
-        ATKLeftAnimEnd,
-        ATKRightAnimEnd,
+        ParryLeftAnimEnd,
+        ParryRightAnimEnd,
         ParryBothAnimEnd,
         DeadStartAnimEnd,
         DeadAnimIdle,
@@ -45,22 +46,16 @@ public class PlayerController : MonoBehaviour
         }
     }
     //Set default value
-    public void Start()
+    public void SetStartValue()
     {
+        inTutorial = true;
         canParry = false;
         isDead = false;
         parrySpriteRenderer.enabled = false;
-        playerAnimator.SetTrigger("RestIdle");   
-        SetStartPosition();
-    }
-    //Spawn start Position
-    public void SetStartPosition()
-    {
-        CreateListOfPoint.Instance.CreateBottomCenterPoint();
-        transform.position = CreateListOfPoint.Instance.GetBottomCenterPoint();
+        playerAnimator.SetTrigger("RestIdle");
     }
     //Set start value
-    public void SetStartValue()
+    public void OnStartBtnClicked()
     {
         parrySpriteRenderer.enabled = true;
         playerAnimator.SetTrigger("RightSideIdle");
@@ -69,13 +64,14 @@ public class PlayerController : MonoBehaviour
         PlayerHealthController.Instance.SetStartValue();
     }
     //update attack left, right or both by touch input
-    void FixedUpdate()
+    void Update()
     {
-        if(isDead || !canParry)return;
+        if(isDead)return;
         leftTouch = false;
         rightTouch = false;
         if(Input.touchCount>0)
         {
+            Debug.Log(inTutorial + "," + canParry);
             foreach(Touch t in Input.touches)
             {
                 if(t.position.x < Screen.width /2)
@@ -104,6 +100,18 @@ public class PlayerController : MonoBehaviour
     //attack left check
     void ParryLeft()
     {
+        if(inTutorial)
+        {
+            if(!Tutorial.Instance.CheckTutorialSide(Tutorial.TouchType.TouchLeft))
+            {
+                canParry = false;
+            }
+            else 
+            {
+                canParry = true;
+                Tutorial.Instance.CloseCurrentTutorial();
+            }
+        }
         if(canParry)
         {
             canParry = false;
@@ -118,12 +126,24 @@ public class PlayerController : MonoBehaviour
                 ComboMultiplier.Instance.ComboReset();
             }
             SoundControl.Instance.PlayerSwordSheathSoundPlay();
-            playerAnimator.SetTrigger("ATKLeftSide");
+            playerAnimator.SetTrigger("LeftSideParry");
         }
     }
     //attack right check
     void ParryRight()
     {
+        if(inTutorial)
+        {
+            if(!Tutorial.Instance.CheckTutorialSide(Tutorial.TouchType.TouchRight))
+            {
+                canParry = false;
+            }
+            else 
+            {
+                canParry = true;
+                Tutorial.Instance.CloseCurrentTutorial();
+            }
+        }
         if(canParry)
         {   
             canParry = false;
@@ -138,12 +158,25 @@ public class PlayerController : MonoBehaviour
                 ComboMultiplier.Instance.ComboReset();
             }
             SoundControl.Instance.PlayerSwordSheathSoundPlay();
-            playerAnimator.SetTrigger("ATKRightSide");
+            playerAnimator.SetTrigger("RightSideParry");
         }
     }
     //attack both check
     private void ParryBoth()
     {
+        if(inTutorial)
+        {
+            if(!Tutorial.Instance.CheckTutorialSide(Tutorial.TouchType.TouchBoth))
+            {
+                canParry = false;
+            }
+            else 
+            {
+                canParry = true;
+                Tutorial.Instance.CloseCurrentTutorial();
+                inTutorial = false;
+            }
+        }
         if(canParry)
         {            
             canParry = false;
@@ -159,7 +192,7 @@ public class PlayerController : MonoBehaviour
                 ComboMultiplier.Instance.ComboReset();
             }
             SoundControl.Instance.PlayerSwordSheathSoundPlay();
-            playerAnimator.SetTrigger("ParryBothSide");
+            playerAnimator.SetTrigger("BothSideParry");
         }
     }
     //Return the destination point for enemy projectiles
@@ -194,7 +227,7 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator.SetTrigger("DeadIdle");
         }
-        if(triggerType == AnimationTriggerType.ATKRightAnimEnd)
+        if(triggerType == AnimationTriggerType.ParryRightAnimEnd)
         {
             if(hitRightSide)
             {
@@ -204,12 +237,12 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                canParry = false;                
+                canParry = false;             
                 StartCoroutine(ParryMissPunish("Right"));
             }
             
         }
-        if(triggerType == AnimationTriggerType.ATKLeftAnimEnd)
+        if(triggerType == AnimationTriggerType.ParryLeftAnimEnd)
         {
             if(hitLeftSide)
             {
@@ -226,8 +259,18 @@ public class PlayerController : MonoBehaviour
         }
         if(triggerType == AnimationTriggerType.ParryBothAnimEnd)
         {
-            canParry = true;
-            playerAnimator.SetTrigger("BothSideIdle");
+            if(hitLeftSide && hitRightSide)
+            {
+                hitLeftSide = false;
+                hitRightSide = false;
+                canParry = true;
+                playerAnimator.SetTrigger("BothSideIdle");
+            }
+            else
+            {
+                canParry = false;
+                StartCoroutine(ParryMissPunish("Both"));
+            }
         }
     }
     //parry miss punish
@@ -300,5 +343,13 @@ public class PlayerController : MonoBehaviour
             PlayerHealthController.Instance.PlayerHurt();
             collision.GetComponent<EnemyParry>().EnemyATKHitPlayer();;
         }
+    }
+    public bool GetInTutorial()
+    {
+        return inTutorial;
+    }
+    public void SetInTutorial(bool value)
+    {
+        inTutorial = value;
     }
 }

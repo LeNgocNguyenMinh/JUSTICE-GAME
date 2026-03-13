@@ -17,6 +17,9 @@ public class SoundControl : MonoBehaviour
     [SerializeField]public AudioClip playerSwordDeflectSound;
     [SerializeField]public AudioClip playerDeflectTingSound;
     [SerializeField]public AudioClip hitSound;
+    [Header("----------Intro sound----------")]
+    [SerializeField]private AudioClip windBlowSound;
+    [SerializeField]private AudioClip leafWalkSound;
     private void Awake()
     {
         if (Instance == null)
@@ -27,11 +30,6 @@ public class SoundControl : MonoBehaviour
         {
             Destroy(gameObject);
         }   
-    }
-    public void Start()
-    {
-        SoundAndMusicSetting.Instance.SetStartValue();
-        MainMenuMusicPlay();
     }
     public void PlayerSwordSheathSoundPlay()
     {
@@ -53,6 +51,14 @@ public class SoundControl : MonoBehaviour
     {
         PlaySFX(hitSound);
     }
+    public void WindBlowSoundPlay()
+    {
+        PlaySFX(windBlowSound);
+    }
+    public void LeafWalkSoundPlay()
+    {
+        PlaySFX(leafWalkSound);
+    }
     public void PlayMusic(AudioClip clip)
     {
         musicSrc.clip = clip;
@@ -67,7 +73,7 @@ public class SoundControl : MonoBehaviour
     {
         PlayMusic(mainMenuMusic);
     }
-   public void LevelSelectMusicPlay()
+    public void LevelSelectMusicPlay()
     {
         PlayMusic(levelSelectMusic);
     }

@@ -49,8 +49,6 @@ public class EnemySpawnController : MonoBehaviour
     {
         spawnCount = spawnDelay;
         indexFlow = 0;
-        CreateListOfPoint.Instance.SetStartValue();
-        EnemySpawnPoints.Instance.SetStartValue();
         ClearList();
         canSpawn = true;
     }

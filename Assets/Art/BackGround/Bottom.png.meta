@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,7 +126,491 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BackGround_0
+      name: Bottom_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd09685ac53e4c045a2be5f04b833e8e
+      internalID: 1810718830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 270
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d735daeaa74bce43afe893cc9a462a9
+      internalID: 2033958121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_2
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 270
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b196c352dd0b75f4883d33ab31b29002
+      internalID: 1863397241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_3
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 270
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b1f1202eac1e8499d512326d38bc4a
+      internalID: -365357554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_4
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 270
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da90f721f8c0114da79758b82296642
+      internalID: 1384149072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_5
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 270
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f761d7e1e2b44f4aa6a232cd20d8922
+      internalID: 205782313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_6
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 270
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17e55afd33320748b3cb1cd7583288e
+      internalID: -1451653823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd594ee03d239148880c9755677cc3f
+      internalID: 1253893230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_8
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 180
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b62ee37911fc0f449232ec394ba441c
+      internalID: 1935704810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_9
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 180
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b85dad0a9b96924a8fdf34b625213c9
+      internalID: -783581458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_10
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 180
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c17520abf59a14fa69721d67a7273e
+      internalID: -1389486678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_11
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 180
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a272eb3784ae64f90e54b647c69008
+      internalID: -1988819185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_12
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 180
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9c00cd577738346927b4edb82d2f3d
+      internalID: -113140355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_13
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 180
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70681a197d2ce14c8c173e2974f0a42
+      internalID: 1400345696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8ceda745e6f8f44aa33bd600619fd9
+      internalID: 815732136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_15
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 90
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411b7fd6ff9d3de4ca76f74e6b46005d
+      internalID: -808012735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_16
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 90
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03de72ddf87fd9d40b89a6bf91416199
+      internalID: 1914559870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_17
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 90
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54c5ba1bb8feb2478508f34dd8ccd92
+      internalID: -1772354210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_18
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 90
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05023e268451e1a48baa3cabc7079e4e
+      internalID: 1459217596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_19
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 90
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ffb717124911042b3c143cfb3a842d
+      internalID: -1624130588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_20
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 90
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5507166ff5eb444b24d00a12816833
+      internalID: 546668261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_21
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 90
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d121a9cae529c4996c225a774969dd
+      internalID: -1004310445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_22
       rect:
         serializedVersion: 2
         x: 0
@@ -134,15 +618,103 @@ TextureImporter:
         width: 195
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7b3d98cff6950ff40800000000000000
-      internalID: 5760202260919997367
+      spriteID: bbb064452484e5b488e3533c274494b2
+      internalID: 1287701423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_23
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3934fd360a2e247a74bb93714ca315
+      internalID: 2122138867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_24
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e001e83af804bb04cb216b779786ad82
+      internalID: -91973636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_25
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 0
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dbbc4b0b3b8848469da24f60ccd14ca
+      internalID: 629393840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bottom_26
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296cae76972f16c4fae3ec9c0fc9bb39
+      internalID: -1121984760
       vertices: []
       indices: 
       edges: []
@@ -159,9 +731,37 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":195.0,"y":90.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      BackGround_0: 5760202260919997367
+      Bottom_0: 1810718830
+      Bottom_1: 2033958121
+      Bottom_10: -1389486678
+      Bottom_11: -1988819185
+      Bottom_12: -113140355
+      Bottom_13: 1400345696
+      Bottom_14: 815732136
+      Bottom_15: -808012735
+      Bottom_16: 1914559870
+      Bottom_17: -1772354210
+      Bottom_18: 1459217596
+      Bottom_19: -1624130588
+      Bottom_2: 1863397241
+      Bottom_20: 546668261
+      Bottom_21: -1004310445
+      Bottom_22: 1287701423
+      Bottom_23: 2122138867
+      Bottom_24: -91973636
+      Bottom_25: 629393840
+      Bottom_26: -1121984760
+      Bottom_3: -365357554
+      Bottom_4: 1384149072
+      Bottom_5: 205782313
+      Bottom_6: -1451653823
+      Bottom_7: 1253893230
+      Bottom_8: 1935704810
+      Bottom_9: -783581458
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
