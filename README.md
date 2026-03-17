@@ -1,30 +1,40 @@
 
 #
 # <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/d410e124-7abd-4b13-8ed9-306fea916b22" /> itch.io
-Check this link for best gameplay and details.
 <p align="center">
-  https://lengocnguyenminh.itch.io/bluexsky
+  <b>
+    Check this link for best gameplay and details.
+  </b><br>
+  <i>
+    <a href="https://lengocnguyenminh.itch.io/justice">
+      https://lengocnguyenminh.itch.io/justice
+    </a>
+  </i>
 </p>
 
 #
-# <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/5a57ee43-ffaf-43dc-9ff0-3540c079745a" /> Check Game Demo On Youtube by click image below
+# <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/5a57ee43-ffaf-43dc-9ff0-3540c079745a" /> Demo On Youtube (click image below)
 
 <p align="center">
-  <a href="https://youtu.be/FaTS52nP68Q">
+  <a href="https://youtu.be/20Ksz0NmXKU">
     <img src="https://github.com/user-attachments/assets/d29e931f-b974-43e4-a5dd-e143f9e1d862" />
   </a>
 </p>
 
 #
-# Justice
+# <img width="63" height="50" alt="image" src="https://github.com/user-attachments/assets/91c6f36b-dcb1-40f8-b699-eee53c96e14e" /> Justice
 <p align="center">
+  <i>
     "What's stronger than a crowbar but weaker than a bullet. A sword. And now, you got dual swords. Parry enemy attack, kill them and find the JUSTICE."
+  </i>
 </p>
 
 #
 # Let see some image in Game
 <p align="center">
+  <b>
 -----Player-----
+   </b>
 </p>
 
 <p align="center">
@@ -39,7 +49,9 @@ Check this link for best gameplay and details.
 </p>
 
 <p align="center">
+  <b>
 -----2 Swords enemy -----
+  </b>
 </p>
 
 <p align="center">
@@ -48,7 +60,9 @@ Check this link for best gameplay and details.
 </p>
 
 <p align="center">
+  <b>
 ----- Long stick enemy -----
+  </b>
 </p>
 
 <p align="center">
@@ -56,7 +70,9 @@ Check this link for best gameplay and details.
 </p>
 
 <p align="center">
+  <b>
 ----- Fly enemy -----
+  </b>
 </p>
 
 <p align="center">
