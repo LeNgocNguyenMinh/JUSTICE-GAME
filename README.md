@@ -22,7 +22,7 @@
 </p>
 
 #
-# <img width="63" height="50" alt="image" src="https://github.com/user-attachments/assets/91c6f36b-dcb1-40f8-b699-eee53c96e14e" /> Justice
+# <img width="63" height="50" alt="image" src="https://github.com/user-attachments/assets/a23100a4-d467-457d-bc0c-12f82728e6e4" /> Justice
 <p align="center">
   <i>
     "What's stronger than a crowbar but weaker than a bullet. A sword. And now, you got dual swords. Parry enemy attack, kill them and find the JUSTICE."
