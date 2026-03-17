@@ -498,7 +498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 33cd48e0f5dfb464ba90ab8fc5868ba8, type: 3}
+  m_Sprite: {fileID: -558719568412269479, guid: 33cd48e0f5dfb464ba90ab8fc5868ba8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d17ef7fd0d34047bf8237e3b8d3981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tutorial
-  tutorialTimeScale: 0.01
+  tutorialTimeScale: 0
   image: {fileID: 904438237}
   animator: {fileID: 232793833}
 --- !u!1 &282478781
@@ -2610,7 +2610,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 519420031}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -3342,7 +3342,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1810718830, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

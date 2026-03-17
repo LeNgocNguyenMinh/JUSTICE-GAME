@@ -29,7 +29,7 @@ public class FirstTypeEnemy : Enemy
     }
     public override void Walk()
     {
-        if(Vector3.Distance(endPos, transform.position) <= 0.01)
+        if(Vector3.Distance(endPos, transform.position) <= 0.1)
         {
             RB.linearVelocity = Vector2.zero;
             StateMachine.ChangeState(AttackState);

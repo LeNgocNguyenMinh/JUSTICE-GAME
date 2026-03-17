@@ -39,12 +39,10 @@ AnimationClip:
     - time: 8
       value: {fileID: 1287701423, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
     - time: 9
-      value: {fileID: 2122138867, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - time: 10
       value: {fileID: -91973636, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - time: 11
+    - time: 10
       value: {fileID: 629393840, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - time: 12
+    - time: 11
       value: {fileID: -1121984760, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
     attribute: m_Sprite
     path: LowerPannel
@@ -77,7 +75,6 @@ AnimationClip:
     - {fileID: 546668261, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
     - {fileID: -1004310445, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
     - {fileID: 1287701423, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - {fileID: 2122138867, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
     - {fileID: -91973636, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
     - {fileID: 629393840, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
     - {fileID: -1121984760, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
@@ -86,7 +83,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 13
+    m_StopTime: 12
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -141,7 +138,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 4
     messageOptions: 0
-  - time: 13
+  - time: 12
     functionName: AnimationTriggerEvent
     data: 
     objectReferenceParameter: {fileID: 0}

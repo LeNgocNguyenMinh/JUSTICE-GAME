@@ -39,7 +39,7 @@ public class Tutorial : MonoBehaviour
     }
     public void PlayTutorial()
     {
-        if(tutorialNum == 2)
+        if(tutorialNum == 1)
         {
             inTutorial = false;
             return;
@@ -95,22 +95,19 @@ public class Tutorial : MonoBehaviour
             animator.SetTrigger("TouchBoth");
         } 
     }
-    public bool GetInTutorial()
-    {
-        return inTutorial;
-    }
     public void CloseCurrentTutorial()
     {
         panelActive = false;
         image.SetActive(false);
         Time.timeScale = 1f;
-    }
-    public bool CheckTutorialSide(TouchType side)
-    {
-        if(panelActive && side == touchType)
+        if(tutorialNum == 1)
         {
-            return true;
+            PlayerController.Instance.SetInTutorial(false);
+            return;
         }
-        return false;
+    }
+    public bool CheckTutorialActive()
+    {
+        return panelActive;
     }
 }

@@ -216,7 +216,7 @@ public class MenuController : MonoBehaviour
     private void SpawnGameObject()
     {
         //Instantiate game object
-        Instantiate(gameManager, transform.position, Quaternion.identity);//spawn game manager
+        Instantiate(gameManager, Vector3.zero, Quaternion.identity);//spawn game manager
         Instantiate(player, new Vector3(0,7,0), Quaternion.identity);//spawn player 
         //Ready sript
         CreateListOfPoint.Instance.SetStartValue();
@@ -228,6 +228,10 @@ public class MenuController : MonoBehaviour
         scoreText.gameObject.SetActive(false); //Hide the point record
         hintImage.SetActive(true);
         canPlayAnimIntro = true;
+    }
+    private IEnumerator Loading()
+    {
+        yield return new WaitForSeconds(2f);
     }
     private void Update()
     {

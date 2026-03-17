@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
     public void SetStartValue()
     {
         inTutorial = true;
+        Debug.Log("1");
         canParry = false;
         isDead = false;
         parrySpriteRenderer.enabled = false;
@@ -74,6 +75,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log(inTutorial + "," + canParry);
             foreach(Touch t in Input.touches)
             {
+                if(t.phase != TouchPhase.Ended) continue;
                 if(t.position.x < Screen.width /2)
                 {
                     leftTouch = true;
@@ -102,18 +104,19 @@ public class PlayerController : MonoBehaviour
     {
         if(inTutorial)
         {
-            if(!Tutorial.Instance.CheckTutorialSide(Tutorial.TouchType.TouchLeft))
-            {
-                canParry = false;
-            }
-            else 
+            if(Tutorial.Instance.CheckTutorialActive())
             {
                 canParry = true;
                 Tutorial.Instance.CloseCurrentTutorial();
             }
+            else 
+            {
+                canParry = false;
+            }
         }
         if(canParry)
         {
+            Debug.Log("3");
             canParry = false;
             if(playerSwordLeft.ParrySuccess())
             {
@@ -134,18 +137,19 @@ public class PlayerController : MonoBehaviour
     {
         if(inTutorial)
         {
-            if(!Tutorial.Instance.CheckTutorialSide(Tutorial.TouchType.TouchRight))
-            {
-                canParry = false;
-            }
-            else 
+            if(Tutorial.Instance.CheckTutorialActive())
             {
                 canParry = true;
                 Tutorial.Instance.CloseCurrentTutorial();
             }
+            else 
+            {
+                canParry = false;
+            }
         }
         if(canParry)
         {   
+            Debug.Log("5");
             canParry = false;
             if(playerSwordRight.ParrySuccess())
             {
@@ -164,21 +168,9 @@ public class PlayerController : MonoBehaviour
     //attack both check
     private void ParryBoth()
     {
-        if(inTutorial)
-        {
-            if(!Tutorial.Instance.CheckTutorialSide(Tutorial.TouchType.TouchBoth))
-            {
-                canParry = false;
-            }
-            else 
-            {
-                canParry = true;
-                Tutorial.Instance.CloseCurrentTutorial();
-                inTutorial = false;
-            }
-        }
         if(canParry)
-        {            
+        {        
+            Debug.Log("7");    
             canParry = false;
             if(playerSwordLeft.ParrySuccess() && playerSwordRight.ParrySuccess())
             {
@@ -237,6 +229,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                Debug.Log("8");
                 canParry = false;             
                 StartCoroutine(ParryMissPunish("Right"));
             }
@@ -252,6 +245,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                Debug.Log("9");
                 canParry = false;
                 StartCoroutine(ParryMissPunish("Left"));
             }
@@ -268,6 +262,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                Debug.Log("10");
                 canParry = false;
                 StartCoroutine(ParryMissPunish("Both"));
             }
@@ -315,6 +310,7 @@ public class PlayerController : MonoBehaviour
         {
             StopAllCoroutines();
             isDead = true;
+            Debug.Log("11");
             canParry = false;
             EnemySpawnController.Instance.SetCanSpawn(false);
             EnemySpawnController.Instance.ClearList();
