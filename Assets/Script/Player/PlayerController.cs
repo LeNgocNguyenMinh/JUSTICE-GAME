@@ -72,7 +72,6 @@ public class PlayerController : MonoBehaviour
         rightTouch = false;
         if(Input.touchCount>0)
         {
-            Debug.Log(inTutorial + "," + canParry);
             foreach(Touch t in Input.touches)
             {
                 if(t.phase != TouchPhase.Ended) continue;
@@ -168,6 +167,18 @@ public class PlayerController : MonoBehaviour
     //attack both check
     private void ParryBoth()
     {
+        if(inTutorial)
+        {
+            if(Tutorial.Instance.CheckTutorialActive())
+            {
+                canParry = true;
+                Tutorial.Instance.CloseCurrentTutorial();
+            }
+            else 
+            {
+                canParry = false;
+            }
+        }
         if(canParry)
         {        
             Debug.Log("7");    

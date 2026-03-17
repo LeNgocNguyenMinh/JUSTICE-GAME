@@ -2897,7 +2897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37146387d067a4b4cb85d6f2a122c39e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealthController
-  maxHealth: 7
+  maxHealth: 4
   heart: {fileID: 6701932200866609519, guid: 1c133144f2659b14da03965cd752f2b9, type: 3}
   parentTransform: {fileID: 290739038}
   normalHeartSprite: {fileID: 4606908045521496030, guid: bf5b3675d47b53c4d92fbddb04e04c2f, type: 3}

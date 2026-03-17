@@ -39,7 +39,7 @@ public class Tutorial : MonoBehaviour
     }
     public void PlayTutorial()
     {
-        if(tutorialNum == 1)
+        if(tutorialNum == 2)
         {
             inTutorial = false;
             return;
@@ -100,7 +100,7 @@ public class Tutorial : MonoBehaviour
         panelActive = false;
         image.SetActive(false);
         Time.timeScale = 1f;
-        if(tutorialNum == 1)
+        if(tutorialNum == 2)
         {
             PlayerController.Instance.SetInTutorial(false);
             return;
