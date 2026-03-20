@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3734804627398485699}
   - component: {fileID: 6491177765231881813}
   m_Layer: 0
-  m_Name: RightLowStartPoint
-  m_TagString: RightCollider
+  m_Name: RLSPoint
+  m_TagString: RLSPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7923581794973764113}
   m_Layer: 0
-  m_Name: RLowDesPoint
-  m_TagString: Untagged
+  m_Name: RLDPoint
+  m_TagString: RLDPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,8 +164,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3958098803047324810}
   m_Layer: 0
-  m_Name: LHighDesPoint
-  m_TagString: Untagged
+  m_Name: LHDPoint
+  m_TagString: LHDPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,8 +273,8 @@ GameObject:
   m_Component:
   - component: {fileID: 150911421376896755}
   m_Layer: 0
-  m_Name: RHighStartPoint
-  m_TagString: Untagged
+  m_Name: RHSPoint
+  m_TagString: RHSPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -338,8 +338,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7511286686851905283}
   m_Layer: 0
-  m_Name: LHighStartPoint
-  m_TagString: Untagged
+  m_Name: LHSPoint
+  m_TagString: LHSPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,8 +369,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6188543649837166150}
   m_Layer: 0
-  m_Name: LLowDesPoint
-  m_TagString: Untagged
+  m_Name: LLDPoint
+  m_TagString: LLDPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -451,8 +451,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2315087280914508085}
   m_Layer: 0
-  m_Name: RHighDesPoint
-  m_TagString: Untagged
+  m_Name: RHDPoint
+  m_TagString: RHDPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -483,8 +483,8 @@ GameObject:
   - component: {fileID: 8185731972832221550}
   - component: {fileID: 305970144650898905}
   m_Layer: 0
-  m_Name: LeftLowStartPoint
-  m_TagString: LeftCollider
+  m_Name: LLSPoint
+  m_TagString: LLSPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -583,13 +583,13 @@ Transform:
   m_Children:
   - {fileID: 3771839246330821806}
   - {fileID: 8185731972832221550}
-  - {fileID: 3734804627398485699}
-  - {fileID: 150911421376896755}
-  - {fileID: 7511286686851905283}
-  - {fileID: 2315087280914508085}
-  - {fileID: 3958098803047324810}
-  - {fileID: 7923581794973764113}
   - {fileID: 6188543649837166150}
+  - {fileID: 7511286686851905283}
+  - {fileID: 3958098803047324810}
+  - {fileID: 3734804627398485699}
+  - {fileID: 7923581794973764113}
+  - {fileID: 150911421376896755}
+  - {fileID: 2315087280914508085}
   m_Father: {fileID: 7654173190070928669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7903614774004981659
@@ -604,14 +604,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 366c37044f2907544b4f6eebedb9bcbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnAirPoints
-  rHighStartPoint: {fileID: 150911421376896755}
-  rHighDesPoint: {fileID: 2315087280914508085}
-  lHighStartPoint: {fileID: 7511286686851905283}
-  lHighDesPoint: {fileID: 3958098803047324810}
-  rLowStartPoint: {fileID: 3734804627398485699}
-  lLowStartPoint: {fileID: 8185731972832221550}
-  rLowDesPoint: {fileID: 7923581794973764113}
-  lLowDesPoint: {fileID: 6188543649837166150}
+  rHSPoint: {fileID: 150911421376896755}
+  rHDPoint: {fileID: 2315087280914508085}
+  lHSPoint: {fileID: 7511286686851905283}
+  lHDPoint: {fileID: 3958098803047324810}
+  rLSPoint: {fileID: 3734804627398485699}
+  lLSPoint: {fileID: 8185731972832221550}
+  rLDPoint: {fileID: 7923581794973764113}
+  lLDPoint: {fileID: 6188543649837166150}
 --- !u!114 &5040644956842005176
 MonoBehaviour:
   m_ObjectHideFlags: 0

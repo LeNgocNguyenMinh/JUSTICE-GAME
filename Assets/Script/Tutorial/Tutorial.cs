@@ -106,8 +106,16 @@ public class Tutorial : MonoBehaviour
             return;
         }
     }
-    public bool CheckTutorialActive()
+    public bool CheckSide(TouchType side)
     {
-        return panelActive;
+        if(panelActive)
+        {
+            if(side == touchType)
+            {
+                CloseCurrentTutorial();
+                return true;
+            }
+        }
+        return false;
     }
 }

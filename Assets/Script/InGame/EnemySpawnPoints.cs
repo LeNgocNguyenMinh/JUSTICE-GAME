@@ -3,14 +3,14 @@ using UnityEngine;
 public class EnemySpawnPoints : MonoBehaviour
 {
     public static EnemySpawnPoints Instance;
-    public Transform rHighStartPoint;
-    public Transform rHighDesPoint;
-    public Transform lHighStartPoint;
-    public Transform lHighDesPoint;
-    public Transform rLowStartPoint;
-    public Transform lLowStartPoint;   
-    public Transform rLowDesPoint;
-    public Transform lLowDesPoint;
+    public Transform rHSPoint;
+    public Transform rHDPoint;
+    public Transform lHSPoint;
+    public Transform lHDPoint;
+    public Transform rLSPoint;
+    public Transform lLSPoint;   
+    public Transform rLDPoint;
+    public Transform lLDPoint;
     private void Awake()
     {
         if(Instance == null)
@@ -24,71 +24,71 @@ public class EnemySpawnPoints : MonoBehaviour
     }
     public void SetStartValue()
     {
-        SetLHighDesPoint();
-        SetRHighDesPoint();
-        SetLHighStartPoint();
-        SetRHighStartPoint();
-        SetLLowStartPoint();
-        SetRLowStartPoint();
-        SetLLowDesPoint();
-        SetRLowDesPoint();
+        SetLHDPoint();
+        SetRHDPoint();
+        SetLHSPoint();
+        SetRHSPoint();
+        SetLLSPoint();
+        SetRLSPoint();
+        SetLLDPoint();
+        SetRLDPoint();
 
     }
-    public void SetRHighStartPoint()
+    public void SetRHSPoint()
     {
         float x = CreateListOfPoint.Instance.camWidth + 2f;
         float y = 1f;
         Vector3 worldPos = new Vector3(x, y, 0);
-        rHighStartPoint.position = worldPos;
+        rHSPoint.position = worldPos;
     }
-    public void SetLHighStartPoint()
+    public void SetLHSPoint()
     {
         float x = -(CreateListOfPoint.Instance.camWidth + 2f);
         float y = 1f;
         Vector3 worldPos = new Vector3(x, y, 0);
-        lHighStartPoint.position = worldPos;
+        lHSPoint.position = worldPos;
     }
-    public void SetRLowStartPoint()
+    public void SetRLSPoint()
     {
         float x = CreateListOfPoint.Instance.camWidth + 2f;
         float y = -3f;
         Vector3 worldPos = new Vector3(x, y, 0);
-        rLowStartPoint.position = worldPos;
+        rLSPoint.position = worldPos;
     }
-    public void SetLLowStartPoint()
+    public void SetLLSPoint()
     {
         float x = -(CreateListOfPoint.Instance.camWidth + 2f);
         float y = -3f;
         Vector3 worldPos = new Vector3(x, y, 0);
-        lLowStartPoint.position = worldPos;
+        lLSPoint.position = worldPos;
     }
-    public void SetRHighDesPoint()
+    public void SetRHDPoint()
     {
         float x = CreateListOfPoint.Instance.GetList4PointX()[3];
         float y = 1f;
         Vector3 worldPos = new Vector3(x, y, 0);
-        rHighDesPoint.position = worldPos;
+        rHDPoint.position = worldPos;
     }
-    public void SetLHighDesPoint()
+    public void SetLHDPoint()
     {
         float x = CreateListOfPoint.Instance.GetList4PointX()[0];
         float y = 1f;
         Vector3 worldPos = new Vector3(x, y, 0);
-        lHighDesPoint.position = worldPos;
+        lHDPoint.position = worldPos;
     }
-    public void SetRLowDesPoint()
+    public void SetRLDPoint()
     {
         float x = CreateListOfPoint.Instance.GetList4PointX()[3];
         float y = -3f;
         Vector3 worldPos = new Vector3(x, y, 0);
-        rLowDesPoint.position = worldPos;
+        rLDPoint.position = worldPos;
     }
-    public void SetLLowDesPoint()
+    public void SetLLDPoint()
     {
         float x = CreateListOfPoint.Instance.GetList4PointX()[0];
         float y = -3f;
         Vector3 worldPos = new Vector3(x, y, 0);
-        lLowDesPoint.position = worldPos;
+        lLDPoint.position = worldPos;
     }
 
 }

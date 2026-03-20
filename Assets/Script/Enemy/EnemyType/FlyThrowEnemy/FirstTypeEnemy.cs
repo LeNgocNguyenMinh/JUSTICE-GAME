@@ -17,18 +17,19 @@ public class FirstTypeEnemy : Enemy
     {
         if(transform.localScale.x > 0)
         {
-            endPos = EnemySpawnPoints.Instance.lHighDesPoint.position;
-            direct = (EnemySpawnPoints.Instance.lHighDesPoint.position - EnemySpawnPoints.Instance.lHighStartPoint.position).normalized;
+            endPos = EnemySpawnPoints.Instance.lHDPoint.position;
+            direct = (EnemySpawnPoints.Instance.lHDPoint.position - EnemySpawnPoints.Instance.lHSPoint.position).normalized;
         }
         else{
-            endPos = EnemySpawnPoints.Instance.rHighDesPoint.position;
-            direct = (EnemySpawnPoints.Instance.rHighDesPoint.position - EnemySpawnPoints.Instance.rHighStartPoint.position).normalized;
+            endPos = EnemySpawnPoints.Instance.rHDPoint.position;
+            direct = (EnemySpawnPoints.Instance.rHDPoint.position - EnemySpawnPoints.Instance.rHSPoint.position).normalized;
         }
         RB.linearVelocity = direct * flySpeed;
         StateMachine.Initialize(WalkState);
     }
     public override void Walk()
     {
+        Debug.Log(Vector3.Distance(endPos, transform.position));
         if(Vector3.Distance(endPos, transform.position) <= 0.1)
         {
             RB.linearVelocity = Vector2.zero;

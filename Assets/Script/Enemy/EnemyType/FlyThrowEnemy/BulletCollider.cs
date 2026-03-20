@@ -24,8 +24,9 @@ public class BulletCollider : EnemyParry
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.CompareTag("LeftCollider") || collider.CompareTag("RightCollider") || collider.CompareTag("GroundCollider"))
+        if(collider.CompareTag("LLSPoint") || collider.CompareTag("RLSPoint") || collider.CompareTag("GroundCollider"))
         {
+            Debug.Log("Destroy");
             DestroyBullet();
         }
     }

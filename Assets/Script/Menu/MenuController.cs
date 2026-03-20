@@ -233,7 +233,7 @@ public class MenuController : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if(Input.touchCount>0)
         {

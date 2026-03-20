@@ -9,11 +9,11 @@ public class LongStickCollider : EnemyParry
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.CompareTag("RightCollider") && secondTypeEnemy.transform.localScale.x > 0)
+        if(collider.CompareTag("RLSPoint") && secondTypeEnemy.transform.localScale.x > 0)
         {
             secondTypeEnemy.ReachDes();
         }
-        if(collider.CompareTag("LeftCollider") && secondTypeEnemy.transform.localScale.x < 0)
+        if(collider.CompareTag("LLSPoint") && secondTypeEnemy.transform.localScale.x < 0)
         {
             secondTypeEnemy.ReachDes();
         }

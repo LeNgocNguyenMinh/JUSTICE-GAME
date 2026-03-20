@@ -4,13 +4,18 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - FirstTypeEnemy
-  - SecondTypeEnemy
   - Sword
   - EnemyATKCollider
-  - LeftCollider
-  - RightCollider
   - GroundCollider
+  - LLSPoint
+  - LHSPoint
+  - LLDPoint
+  - LHDPoint
+  - RLSPoint
+  - RHSPoint
+  - RLDPoint
+  - RHDPoint
+  - SecondTypeEnemy
   layers:
   - Default
   - TransparentFX

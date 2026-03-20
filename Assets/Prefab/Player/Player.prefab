@@ -269,7 +269,7 @@ MonoBehaviour:
   playerSwordRight: {fileID: 6865050825511101511}
   parryWindow: 0.2
   missPunishTime: 0.25
-  listX: []
+  bufferTime: 0.05
 --- !u!114 &7946645680257230532
 MonoBehaviour:
   m_ObjectHideFlags: 0

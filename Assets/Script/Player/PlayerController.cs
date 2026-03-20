@@ -7,9 +7,12 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance;
+    [Header("-----Health-----")]
     [SerializeField]private int maxHitEarnHeart;
     [SerializeField]private Animator playerAnimator;
+    [Header("-----Enemy attack des-----")]
     [SerializeField]private Transform enemyBulletDes;
+    [Header("-----Parry-----")]
     [SerializeField]private Sprite oriParrySprite;
     [SerializeField]private Sprite teleParrySprite;
     [SerializeField]private SpriteRenderer parrySpriteRenderer;
@@ -18,7 +21,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]private PlayerSword playerSwordRight;
     [SerializeField]private float parryWindow;
     [SerializeField]private float missPunishTime;
-    public List<float> listX;
+    [Header("-----Check Touch-----")]
+    [SerializeField]private float bufferTime;
+    private bool isWaitingForInput;
     private bool isDead;
     private bool hitLeftSide;
     private bool hitRightSide;
@@ -62,55 +67,62 @@ public class PlayerController : MonoBehaviour
         playerAnimator.SetTrigger("RightSideIdle");
         isDead = false;
         canParry = true;
+        isWaitingForInput = false;
+        leftTouch = false;
+        rightTouch = false;
         PlayerHealthController.Instance.SetStartValue();
     }
     //update attack left, right or both by touch input
     void Update()
     {
         if(isDead)return;
-        leftTouch = false;
-        rightTouch = false;
-        if(Input.touchCount>0)
+        for(int i = 0; i < Input.touchCount; i++)
         {
-            foreach(Touch t in Input.touches)
+            Touch t = Input.GetTouch(i);
+            if(t.phase == TouchPhase.Began)
             {
-                if(t.phase != TouchPhase.Ended) continue;
-                if(t.position.x < Screen.width /2)
+                if(t.position.x < Screen.width / 2)
                 {
                     leftTouch = true;
                 }
-                else if(t.position.x >= Screen.width /2)
+                else 
                 {
                     rightTouch = true;
                 }
-            }
-            if(leftTouch && rightTouch )
+            }   
+            if(!isWaitingForInput)
             {
-                ParryBoth();
-            }
-            else if(leftTouch)
-            {
-                ParryLeft();
-            }
-            else if(rightTouch)
-            {
-                ParryRight();
+                StartCoroutine(ProccessInput());
             }
         }
+    }
+    private IEnumerator ProccessInput()
+    {
+        isWaitingForInput = true;
+        yield return new WaitForSecondsRealtime(bufferTime);
+        if(leftTouch && rightTouch)
+        {
+            ParryBoth();
+        }
+        else if (leftTouch)
+        {
+            ParryLeft();
+        }
+        else{
+            ParryRight();
+        }
+        leftTouch = false;
+        rightTouch = false;
+        isWaitingForInput = false;
     }
     //attack left check
     void ParryLeft()
     {
         if(inTutorial)
         {
-            if(Tutorial.Instance.CheckTutorialActive())
+            if(!Tutorial.Instance.CheckSide(Tutorial.TouchType.TouchLeft))
             {
-                canParry = true;
-                Tutorial.Instance.CloseCurrentTutorial();
-            }
-            else 
-            {
-                canParry = false;
+                return;
             }
         }
         if(canParry)
@@ -136,14 +148,9 @@ public class PlayerController : MonoBehaviour
     {
         if(inTutorial)
         {
-            if(Tutorial.Instance.CheckTutorialActive())
+            if(!Tutorial.Instance.CheckSide(Tutorial.TouchType.TouchRight))
             {
-                canParry = true;
-                Tutorial.Instance.CloseCurrentTutorial();
-            }
-            else 
-            {
-                canParry = false;
+                return;
             }
         }
         if(canParry)
@@ -167,16 +174,11 @@ public class PlayerController : MonoBehaviour
     //attack both check
     private void ParryBoth()
     {
-        if(inTutorial)
+       if(inTutorial)
         {
-            if(Tutorial.Instance.CheckTutorialActive())
+            if(!Tutorial.Instance.CheckSide(Tutorial.TouchType.TouchBoth))
             {
-                canParry = true;
-                Tutorial.Instance.CloseCurrentTutorial();
-            }
-            else 
-            {
-                canParry = false;
+                return;
             }
         }
         if(canParry)
@@ -232,6 +234,7 @@ public class PlayerController : MonoBehaviour
         }
         if(triggerType == AnimationTriggerType.ParryRightAnimEnd)
         {
+            Debug.Log("5-1");
             if(hitRightSide)
             {
                 hitRightSide = false;
@@ -239,15 +242,14 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.SetTrigger("RightSideIdle");
             }
             else
-            {
-                Debug.Log("8");
-                canParry = false;             
+            {         
                 StartCoroutine(ParryMissPunish("Right"));
             }
             
         }
         if(triggerType == AnimationTriggerType.ParryLeftAnimEnd)
         {
+            Debug.Log("3-1");
             if(hitLeftSide)
             {
                 hitLeftSide = false;
@@ -256,14 +258,13 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                Debug.Log("9");
-                canParry = false;
                 StartCoroutine(ParryMissPunish("Left"));
             }
             
         }
         if(triggerType == AnimationTriggerType.ParryBothAnimEnd)
         {
+            Debug.Log("7-1");
             if(hitLeftSide && hitRightSide)
             {
                 hitLeftSide = false;
@@ -273,8 +274,6 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                Debug.Log("10");
-                canParry = false;
                 StartCoroutine(ParryMissPunish("Both"));
             }
         }
@@ -282,6 +281,7 @@ public class PlayerController : MonoBehaviour
     //parry miss punish
     private IEnumerator ParryMissPunish(string side)
     {
+        canParry= false;
         if(side == "Left")
         {
             playerAnimator.SetTrigger("LeftSideMiss");
@@ -295,6 +295,8 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetTrigger("BothSideMiss");
         }
         yield return new WaitForSeconds(missPunishTime);
+        Debug.Log("Finish punish");
+        canParry = true;
         if(side == "Left")
         {
             playerAnimator.SetTrigger("LeftSideIdle");
@@ -307,7 +309,6 @@ public class PlayerController : MonoBehaviour
         {
             playerAnimator.SetTrigger("BothSideIdle");
         }
-        canParry = true;
     }
     //Player gain heart
     public void GainHeart()
