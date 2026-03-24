@@ -127,7 +127,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: SettingBorder
+  - name: Upper
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -139,7 +139,7 @@ ScriptedImporter:
       y: 4
       width: 195
       height: 90
-    spriteID: ead02593970453343a9af753c1ba6f6c
+    spriteID: 4815420880e781748a848e571a79de29
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -171,7 +171,7 @@ ScriptedImporter:
         y: 0
         width: 195
         height: 90
-      spriteId: ead02593970453343a9af753c1ba6f6c
+      spriteId: 4815420880e781748a848e571a79de29
     linkedCells: []
     tileCells: []
     tileSetIndex: 0

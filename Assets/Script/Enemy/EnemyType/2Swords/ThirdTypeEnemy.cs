@@ -17,17 +17,28 @@ public class ThirdTypeEnemy : Enemy
             endPos = EnemySpawnPoints.Instance.rLDPoint.position;
             direct = (EnemySpawnPoints.Instance.rLDPoint.position - EnemySpawnPoints.Instance.rLSPoint.position).normalized;
         }
+        RB.linearVelocity = direct * speed;
         StateMachine.Initialize(WalkState);
     }
-
     public override void Walk()
     {
-        RB.linearVelocity = direct * speed;
-        if(Vector3.Distance(endPos, transform.position) <= 0.01)
+        float distance = Vector3.Distance(endPos, transform.position);
+        bool passedDestination = false;
+        if (transform.localScale.x > 0) 
         {
+            passedDestination = transform.position.x >= endPos.x;
+        }
+            
+        else 
+        {
+            passedDestination = transform.position.x <= endPos.x;
+        }
+        if (distance <= 0.1f || passedDestination) 
+        {
+            transform.position = endPos; // Khớp vị trí chính xác vào đích
             StateMachine.ChangeState(AttackState);
         }
-    }  
+    } 
     public void FallBack()
     {
         //enemy go -direct in 0.2s then go direct

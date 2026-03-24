@@ -170,11 +170,12 @@ public class MenuController : MonoBehaviour
         int calNum = -1;
         while(calNum < point)
         {
+            GameEffect.Instance.FireWorkPlay();
             calNum++;
             scoreText.text = "" + calNum;
             scoreRect.DOKill();
             scoreRect.localScale = Vector3.one;
-            scoreRect.DOScale(2f, .05f)
+            scoreRect.DOScale(2f, .1f)
             .SetLoops(2, LoopType.Yoyo);
             yield return new WaitForSeconds(.1f);
         }
@@ -226,12 +227,13 @@ public class MenuController : MonoBehaviour
         Tutorial.Instance.SetStartValue();//Set Start up value and action for tutorial
         //UI ready
         scoreText.gameObject.SetActive(false); //Hide the point record
-        hintImage.SetActive(true);
-        canPlayAnimIntro = true;
+        StartCoroutine(Loading());
     }
     private IEnumerator Loading()
     {
         yield return new WaitForSeconds(2f);
+        hintImage.SetActive(true);
+        canPlayAnimIntro = true;
     }
     private void FixedUpdate()
     {

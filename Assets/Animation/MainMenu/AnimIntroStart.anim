@@ -22,34 +22,34 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 815732136, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - time: 0.5
+    - time: 0.33333334
       value: {fileID: -808012735, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - time: 1
+    - time: 0.6666667
       value: {fileID: 1914559870, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - time: 1.5
+    - time: 1
       value: {fileID: -1772354210, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - time: 2
+    - time: 1.3333334
       value: {fileID: 1459217596, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - time: 2.5
+    - time: 1.6666666
       value: {fileID: -1624130588, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - time: 3
+    - time: 2
       value: {fileID: 546668261, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - time: 3.5
+    - time: 2.3333333
       value: {fileID: -1004310445, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - time: 4
+    - time: 2.6666667
       value: {fileID: 1287701423, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - time: 4.5
+    - time: 3
       value: {fileID: 2122138867, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - time: 5
+    - time: 3.3333333
       value: {fileID: -91973636, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
-    - time: 5.5
+    - time: 3.6666667
       value: {fileID: 629393840, guid: d88e4daff78f08f4ab6347c68e1d0671, type: 3}
     attribute: m_Sprite
     path: LowerPannel
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 2
-  m_SampleRate: 2
+  m_SampleRate: 3
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -83,7 +83,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 6
+    m_StopTime: 4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -110,35 +110,35 @@ AnimationClip:
     floatParameter: 0
     intParameter: 3
     messageOptions: 0
-  - time: 1
+  - time: 0.6666667
     functionName: AnimationTriggerEvent
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 5
     messageOptions: 0
-  - time: 2
+  - time: 1.3333334
     functionName: AnimationTriggerEvent
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 3
     messageOptions: 0
-  - time: 2.5
+  - time: 1.6666666
     functionName: AnimationTriggerEvent
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 6
     messageOptions: 0
-  - time: 3
+  - time: 2
     functionName: AnimationTriggerEvent
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 4
     messageOptions: 0
-  - time: 6
+  - time: 4
     functionName: AnimationTriggerEvent
     data: 
     objectReferenceParameter: {fileID: 0}

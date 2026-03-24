@@ -52,7 +52,7 @@ public class EnemySpawnController : MonoBehaviour
         ClearList();
         canSpawn = true;
     }
-    private void FixedUpdate()
+    private void Update()
     {
         if(!canSpawn)return;
         if(spawnCount <= 0)
@@ -71,7 +71,7 @@ public class EnemySpawnController : MonoBehaviour
         }
         else
         {
-            spawnCount -= Time.fixedDeltaTime;
+            spawnCount -= Time.deltaTime;
         }
     }
     private void SpawnEnemy(EnemySpawnFlow enemySpawnFlow)

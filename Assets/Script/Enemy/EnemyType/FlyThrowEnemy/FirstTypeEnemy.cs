@@ -29,13 +29,24 @@ public class FirstTypeEnemy : Enemy
     }
     public override void Walk()
     {
-        Debug.Log(Vector3.Distance(endPos, transform.position));
-        if(Vector3.Distance(endPos, transform.position) <= 0.1)
+        float distance = Vector3.Distance(endPos, transform.position);
+        bool passedDestination = false;
+        if (transform.localScale.x > 0) 
         {
+            passedDestination = transform.position.x >= endPos.x;
+        }
+            
+        else 
+        {
+            passedDestination = transform.position.x <= endPos.x;
+        }
+        if (distance <= 0.1f || passedDestination) 
+        {
+            transform.position = endPos; // Khớp vị trí chính xác vào đích
             RB.linearVelocity = Vector2.zero;
             StateMachine.ChangeState(AttackState);
         }
-    }
+    } 
     public override void Attack()
     {
         BulletCollider projectile = Instantiate(projectilePrefab, throwPoint.position, Quaternion.identity).GetComponentInChildren<BulletCollider>();

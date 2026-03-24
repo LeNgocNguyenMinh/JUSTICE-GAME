@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [Header("-----Health-----")]
     [SerializeField]private int maxHitEarnHeart;
     [SerializeField]private Animator playerAnimator;
-    [Header("-----Enemy attack des-----")]
+    [Header("-----Enemy parry des-----")]
     [SerializeField]private Transform enemyBulletDes;
     [Header("-----Parry-----")]
     [SerializeField]private Sprite oriParrySprite;
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
         rightTouch = false;
         PlayerHealthController.Instance.SetStartValue();
     }
-    //update attack left, right or both by touch input
+    //update parry left, right or both by touch input
     void Update()
     {
         if(isDead)return;
@@ -81,6 +81,7 @@ public class PlayerController : MonoBehaviour
             Touch t = Input.GetTouch(i);
             if(t.phase == TouchPhase.Began)
             {
+                Debug.Log("Can Parry value: " + canParry);
                 if(t.position.x < Screen.width / 2)
                 {
                     leftTouch = true;
@@ -115,7 +116,7 @@ public class PlayerController : MonoBehaviour
         rightTouch = false;
         isWaitingForInput = false;
     }
-    //attack left check
+    //parry left check
     void ParryLeft()
     {
         if(inTutorial)
@@ -143,7 +144,7 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetTrigger("LeftSideParry");
         }
     }
-    //attack right check
+    //parry right check
     void ParryRight()
     {
         if(inTutorial)
@@ -171,7 +172,7 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetTrigger("RightSideParry");
         }
     }
-    //attack both check
+    //parry both check
     private void ParryBoth()
     {
        if(inTutorial)
@@ -322,13 +323,13 @@ public class PlayerController : MonoBehaviour
         {
             StopAllCoroutines();
             isDead = true;
-            Debug.Log("11");
             canParry = false;
+            playerAnimator.SetTrigger("DeadStart");
+            Debug.Log("11");
             EnemySpawnController.Instance.SetCanSpawn(false);
             EnemySpawnController.Instance.ClearList();
             parrySpriteRenderer.enabled = false;
             MenuController.Instance.OnDeadStart();
-            playerAnimator.SetTrigger("DeadStart");
         }
     }
     //Get parry window time

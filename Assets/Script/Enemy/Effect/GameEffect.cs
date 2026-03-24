@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameEffect : MonoBehaviour
 {
     [SerializeField]private float duration;
+    [SerializeField]private ParticleSystem[] fireWorkList;
     public static GameEffect Instance;
     private void Awake()
     {
@@ -17,20 +18,6 @@ public class GameEffect : MonoBehaviour
         }
     }
     
-    /* [SerializeField]private Material hitMaterial;
-    [SerializeField]private Material defaultMaterial;
-    [SerializeField]private SpriteRenderer spriteRenderer; */
-    /* public void HitEffectPlay()
-    {
-        StopAllCoroutines();
-        FlaskEffect();
-        FreezeEffectPlay();
-        StartCoroutine(ResetEffect());
-    } */
-    /* public void FlaskEffect()
-    {
-        spriteRenderer.material = hitMaterial;
-    } */
     public void FreezeEffectPlay()
     {
         StopAllCoroutines();
@@ -42,10 +29,11 @@ public class GameEffect : MonoBehaviour
         yield return new WaitForSecondsRealtime(duration);
         Time.timeScale = 1f;
     }
-    /* public IEnumerator ResetEffect()
+    public void FireWorkPlay()
     {
-        yield return new WaitForSecondsRealtime(duration);
-        spriteRenderer.material = defaultMaterial;
-        Time.timeScale = 1f;
-    } */
+        foreach(ParticleSystem fireWork in fireWorkList)
+        {
+            fireWork.Play();
+        }
+    }
 }

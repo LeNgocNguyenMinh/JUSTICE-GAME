@@ -24,7 +24,10 @@ public class PlayerSword : MonoBehaviour
         if(canParry)
         {
             SoundControl.Instance.PlayerSwordDeflectSoundPlay();
-            currentEnemyParry.Parry();
+            if(currentEnemyParry != null)
+            {
+                currentEnemyParry.Parry();
+            }
             GameEffect.Instance.FreezeEffectPlay();
             GameObject tmp = Instantiate(parryParticle, parryParticlePos.position, Quaternion.identity);
             Destroy(tmp, .4f);
